@@ -24,6 +24,12 @@ RUN apt-get update && \
                        ffmpeg \
                        crunch \
                        cewl \
+                       wireshark \
+                       tshark \
+                       nemiver \
+                       nano \
+                       vim \
+                       git \
                        sonic-visualiser \
                        atomicparsley && \
     pip3 install python-magic && \
