@@ -2,8 +2,8 @@
 
 set -e
 
-PASSWORD=$(openssl rand -hex 12)
-
+#PASSWORD=$(openssl rand -hex 12)
+PASSWORD="eset"
 echo "Changing root password to ${PASSWORD}"
 echo "root:${PASSWORD}" | chpasswd
 

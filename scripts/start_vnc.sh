@@ -13,7 +13,8 @@ VNC_RESOLUTION=1024x768
 VNC_COL_DEPTH=24
 
 # Generate random password
-PASSWORD=$(openssl rand -hex 12)
+#PASSWORD=$(openssl rand -hex 12)
+PASSWORD="eset"
 
 mkdir -p "$HOME/.vnc"
 PASSWD_PATH="$HOME/.vnc/passwd"

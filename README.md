@@ -1,3 +1,19 @@
+# CheatSheet
+-- Make --
+docker build -t <image_name> .
+
+-- Run Prepared with VNC --
+docker run -p 127.0.0.1:6901:6901 -v /local/folder/with/data:/data /bin/bash -it <image_name>
+Execute start_vnc.sh
+Pass will be 'eset'
+
+-- Prerequisite --
+Install docker in host computer
+https://www.digitalocean.com/community/tutorials/como-instalar-y-usar-docker-en-ubuntu-16-04-es
+
+Install noVNC in host computer
+after running previous step with start_vnc.sh point your browser to the novnc address refered in terminal
+
 # Steganography Toolkit
 
 This project is a Docker image useful for solving Steganography challenges as those you can find at CTF platforms like [hackthebox.eu](https://www.hackthebox.eu/).
@@ -16,7 +32,7 @@ It will have the `data` folder mounted, into which you can put the files to anal
 
 If you don't use the scripts, follow these steps:
 1. Build image (`docker build -t <image_name> .`) or pull from Docker hub (`docker pull dominicbreuker/stego-toolkit`)
-2. Start a container with your files mounted to the folder `/data` (`docker run -it <image_name> -v /local/folder/with/data:/data /bin/bash`)
+2. Start a container with your files mounted to the folder `/data` (`docker run -v /local/folder/with/data:/data /bin/bash -it <image_name>`)
 3. Use CLI tools and screening scripts on your files: e.g., run `check_jpg.sh image.jpg` to create a quick report, or run `brute_jpg.sh image.jpg wordlist.txt` to try extracting hidden data with various tools and passwords
 4. If you want to run GUI tools use one of these two ways:
   - Run `start_ssh.sh` and connect to your container with X11 forwarding
