@@ -24,12 +24,13 @@ RUN apt-get update && \
                        ffmpeg \
                        crunch \
                        cewl \
+                       #Start of added packages
                        wireshark \
                        tshark \
                        nemiver \
                        nano \
                        vim \
-                       git \
+                       #End
                        sonic-visualiser \
                        atomicparsley && \
     pip3 install python-magic && \
