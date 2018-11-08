@@ -1,18 +1,33 @@
 # CheatSheet
--- Make --
-docker build -t <image_name> .
 
--- Run Prepared with VNC --
-docker run -p 127.0.0.1:6901:6901 -v /local/folder/with/data:/data -it <image_name>
-Execute start_vnc.sh
-Pass will be 'eset'
-
--- Prerequisite --
+## Prerequisites
 Install docker in host computer
 https://www.digitalocean.com/community/tutorials/como-instalar-y-usar-docker-en-ubuntu-16-04-es
 
 Install noVNC in host computer
 after running previous step with start_vnc.sh point your browser to the novnc address refered in terminal
+
+## Make docker image
+
+docker build -t <image_name> .
+
+## Run docker image with VNC in order to use GUI apps . Could be used with X11 forwading , read further below to get into the details
+
+docker run -p 127.0.0.1:6901:6901 -v /local/folder/with/data:/data -it <image_name>
+Execute start_vnc.sh
+Pass will be 'eset'
+
+# Reverse engineering
+|Tool          |Description       |How to use     |
+|--------------|------------------|---------------|
+| radare2        | Powerful command line for static analisys , reverse engineering, file carving ... A swish knife | `radare2 executable` |
+| nemiver     | Reverse engineering. GUI easy debugging | `` |
+
+#Network analyzers
+|Tool          |Description       |How to use     |
+|--------------|------------------|---------------|
+| Wireshark    | Networl protocol analyzer, good to solve network problems and do network forencsic | `GUI` |
+| tshark     | Command line wireshark  | Capture wifi packets `tshark -i wlan0 -w capture-output.pcap` |
 
 # Steganography Toolkit
 
