@@ -3,7 +3,7 @@
 docker build -t <image_name> .
 
 -- Run Prepared with VNC --
-docker run -p 127.0.0.1:6901:6901 -v /local/folder/with/data:/data /bin/bash -it <image_name>
+docker run -p 127.0.0.1:6901:6901 -v /local/folder/with/data:/data -it <image_name>
 Execute start_vnc.sh
 Pass will be 'eset'
 
