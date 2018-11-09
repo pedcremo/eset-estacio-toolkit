@@ -30,6 +30,8 @@ RUN apt-get update && \
                        nemiver \
                        nano \
                        vim \
+                       zenmap \
+                       ghex \
                        #End
                        sonic-visualiser \
                        atomicparsley && \

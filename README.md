@@ -4,8 +4,8 @@
 Install docker in host computer
 https://www.digitalocean.com/community/tutorials/como-instalar-y-usar-docker-en-ubuntu-16-04-es
 
-Install noVNC in host computer
-after running previous step with start_vnc.sh point your browser to the novnc address refered in terminal
+Install noVNC in host computer or any VNC desktop app like xvnc4viewer
+We'll use it to connect docker running container
 
 ## Make docker image
 
@@ -13,9 +13,19 @@ docker build -t <image_name> .
 
 ## Run docker image with VNC in order to use GUI apps . Could be used with X11 forwading , read further below to get into the details
 
-docker run -p 127.0.0.1:6901:6901 -v /local/folder/with/data:/data -it <image_name>
+docker run -p 127.0.0.1:6901:6901 -v /local/folder/with/data:/data -it 
+<image_name>
 Execute start_vnc.sh
 Pass will be 'eset'
+
+In your host open browser and point to address refered in terminal
+
+If you prefer redirect X11 through ssh
+docker run -p 127.0.0.1:22:22 -v /local/folder/with/data:/data -it 
+<image_name>
+Execute start_ssh.sh
+Pass will be 'eset'
+
 
 # Reverse engineering
 
