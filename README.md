@@ -26,7 +26,6 @@ docker run -p 127.0.0.1:22:22 -v /local/folder/with/data:/data -it
 Execute start_ssh.sh
 Pass will be 'eset'
 
-
 # Reverse engineering
 
 |Tool          |Description       |How to use     |
@@ -40,6 +39,9 @@ Pass will be 'eset'
 |--------------|------------------|---------------|
 | Wireshark    | Networl protocol analyzer, good to solve network problems and do network forencsic | `GUI` |
 | tshark     | Command line wireshark  | Capture wifi packets `tshark -i wlan0 -w capture-output.pcap` |
+| zenmap    | Network mapper analyzer GUI for nmap  | GUI|
+| nmap    | The Network mapper analyzer | scan all network hosts `nmap -v -sP 192.168.211.0/24`|
+
 
 # Steganography Toolkit
 
