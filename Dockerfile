@@ -32,6 +32,7 @@ RUN apt-get update && \
                        vim \
                        zenmap \
                        ghex \
+                       peepdf \
                        #End
                        sonic-visualiser \
                        atomicparsley && \
