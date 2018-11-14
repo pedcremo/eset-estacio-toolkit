@@ -31,8 +31,7 @@ RUN apt-get update && \
                        nano \
                        vim \
                        zenmap \
-                       ghex \
-                       peepdf \
+                       ghex \                       
                        #End
                        sonic-visualiser \
                        atomicparsley && \
